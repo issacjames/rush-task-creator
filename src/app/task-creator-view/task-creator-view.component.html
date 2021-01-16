@@ -1,0 +1,75 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{ data.name }}</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+        <form [formGroup]="taskCreatorForm">
+                <textarea [(ngModel)]="task" [ngModelOptions]="{standalone: true}"></textarea>
+                <div>
+                    <input type="text" class="form-control" formControlName="Sku" placeholder="SKU">
+                    <input type="text" class="form-control" formControlName="SizeRange" placeholder="Size Range">
+                    <input type="text" class="form-control" formControlName="Count" placeholder="Count">
+                </div>
+                            <span class="example-list-section">
+                                <ul>
+                                <li>
+                                    <mat-checkbox 
+                                        class="form-control"
+                                        formControlName="OnePerProfile">
+                                    One Per Profile
+                                    </mat-checkbox>
+                                </li>
+                                <li>
+                                    <mat-checkbox 
+                                        class="form-control"
+                                        formControlName="DynDelay">
+                                    Dynamic Delay
+                                    </mat-checkbox>
+                                </li>
+                                <li>
+                                    <mat-checkbox 
+                                        class="form-control"
+                                        formControlName="V6Proxy">
+                                    V6 Proxy
+                                    </mat-checkbox>
+                                </li>
+                                <li>
+                                    <mat-checkbox 
+                                        class="form-control"
+                                        formControlName="RotateProxy">
+                                    Rotate Proxy
+                                    </mat-checkbox>
+                                </li>
+                                </ul>
+                            </span>
+                        <mat-radio-group
+                                aria-labelledby="example-radio-group-label"
+                                class="example-radio-group form-control"
+                                formControlName="Site"
+                            >
+                            <mat-radio-button class="example-radio-button" [value]="'footlocker'">
+                                Footlocker
+                            </mat-radio-button>
+                            <mat-radio-button class="example-radio-button" [value]="'champssports'">
+                                Champs Sports
+                            </mat-radio-button>
+                            <mat-radio-button class="example-radio-button" [value]="'footaction'">
+                                Footaction
+                            </mat-radio-button>
+                            <mat-radio-button class="example-radio-button" [value]="'eastbay'">
+                                Eastbay
+                            </mat-radio-button>
+                            <mat-radio-button class="example-radio-button" [value]="'kidsfootlocker'">
+                                Kids Footlocker
+                        </mat-radio-button>
+                </mat-radio-group>
+                    
+
+               
+                
+            
+        </form>
+    </mat-card-content>
+
+  </mat-card>

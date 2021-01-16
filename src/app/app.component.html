@@ -1,0 +1,9 @@
+<p>
+  <mat-toolbar>
+    <span>Rush Task Creator</span>
+  </mat-toolbar>
+</p>
+
+<ng-container *ngFor="let section of data">
+  <app-task-creator-view [data]="section" [profiles]="profiles"></app-task-creator-view>
+</ng-container>
